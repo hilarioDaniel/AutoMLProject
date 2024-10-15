@@ -1,27 +1,22 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import pandas as pd
 from PIL import Image
-from pydantic import BaseModel, Field, PrivateAttr
-from pydantic_settings import BaseSettings
-
 
 ## Configuracoes da pagina
 st.set_page_config(
     page_icon="robot", #https://icons.getbootstrap.com/
-    page_title="Auto Machine Learning with Streamlit",
+    page_title="EDA and Machine Learning with Python and Streamlit",
     layout="wide",
     initial_sidebar_state="auto",
 )
 
 ##### 0.Side bar #####
 with st.sidebar:
-    logoHeader = Image.open("img/image4.png")
+    logoHeader = Image.open("img/niats.png")
     st.image(logoHeader, use_column_width=True)
-    st.header('ML `version 1.1`')
+    st.header('EDA and ML `version 1.0`')
 
     selected = option_menu(
-        #https://icons.getbootstrap.com/
         menu_icon="cast",
         menu_title="Main Menu",
         options=['Home', 'Upload', 'EDA', 'Machine Learning'],
@@ -30,9 +25,9 @@ with st.sidebar:
         orientation="vertical",
     )
     
-    st.markdown("Desenvolvido por [Daniel Hilário](https://www.instagram.com/prof.danielhilario/)")
+    st.markdown("Developed by: [Silva, D.H.](https://www.instagram.com/prof.danielhilario/) and [Ribeiro, C.T](https://www.instagram.com/caiotonus/)")
 
-##### 1. Interacao com a Side bar #####
+##### 1. Side bar interaction #####
 if selected == "Home":
     ## Abrir a página home.py
     with open("home.py", "r") as f:

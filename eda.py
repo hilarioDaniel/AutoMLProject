@@ -2,30 +2,34 @@ import streamlit as st
 import pandas as pd
 from ydata_profiling import ProfileReport
 import streamlit.components.v1 as components
-from streamlit_lottie import st_lottie
-import requests
 import os
 
-# Função para carregar animações Lottie a partir de uma URL
-def load_lottie_url(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+# Função para listar arquivos na pasta datasets
+def list_files_in_datasets():
+    files = [f for f in os.listdir('./datasets') if f.endswith('.csv') or f.endswith('.xlsx')]
+    return files
 
-# URL da animação Lottie específica
-lottie_url = "https://lottie.host/e1a2656b-a71d-4ff0-8ba8-005922673a4e/rIESHPrdJe.json"
-lottie_animation = load_lottie_url(lottie_url)
+# Verificar se há arquivos disponíveis na pasta
+files_available = list_files_in_datasets()
 
-# Placeholder para a animação
-placeholder = st.empty()
+st.title("Exploratory Data Analysis (EDA)")
+st.divider()
 
-# Verificar se o arquivo de dados existe
-if not os.path.exists('dados.csv'):
-    st.warning("Por favor, faça o upload dos dados na aba 'Upload de Arquivo' antes de iniciar a análise.")
+if not files_available:
+    st.warning("No files available. Please upload the data before starting the analysis.")
 else:
-    # Carregar o DataFrame
-    df = pd.read_csv('dados.csv')
+    # Selectbox para o usuário escolher o arquivo
+    selected_file = st.selectbox("Select the file for analysis", files_available)
+
+    # Carregar o DataFrame com base no arquivo selecionado
+    try:
+        if selected_file.endswith('.csv'):
+            df = pd.read_csv(f'./datasets/{selected_file}')
+        else:
+            df = pd.read_excel(f'./datasets/{selected_file}')
+    except Exception as e:
+        st.error(f"Error loading the file: {e}")
+        st.stop()  # Para o código caso haja um erro ao carregar o arquivo
 
     # Função para gerar e armazenar o relatório de EDA em cache
     @st.cache_data
@@ -34,23 +38,19 @@ else:
         return profile.to_html()
 
     # Botão para iniciar a análise
-    start_analysis = st.button("Iniciar Análise de Dados")
+    start_analysis = st.button("Start Data Analysis", use_container_width=True)
 
     if start_analysis:
-        # Exibir a animação enquanto o relatório está carregando
-        with placeholder.container():
-            if lottie_animation:
-                st_lottie(lottie_animation, height=200, key="loading")
+        try:
+            # Gerar o relatório de perfilamento e armazenar em cache
+            profile_html = generate_profile_report(df)
 
-        # Gerar o relatório de perfilamento e armazenar em cache
-        profile_html = generate_profile_report(df)
+            # Exibir o relatório no Streamlit
+            components.html(profile_html, height=1000, width=1100, scrolling=True)
 
-        # Remover a animação de carregamento
-        placeholder.empty()
-
-        # Exibir o relatório no Streamlit
-        components.html(profile_html, height=900, width=900, scrolling=True)
+        except Exception as e:
+            st.error(f"Error generating the profile report: {e}")
 
     # Verificar se o relatório já está gerado e exibir
     elif st.session_state.get("profile_html"):
-        components.html(st.session_state["profile_html"], height=900, width=900, scrolling=True)
+        components.html(st.session_state["profile_html"], height=1000, width=1100, scrolling=True)

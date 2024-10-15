@@ -1,8 +1,8 @@
 import streamlit as st
 from PIL import Image
 
-# Título e descrição da página inicial
-# Imagem
+# Title and description of the initial page
+# Image
 logoHome = Image.open("img/image1.png")
 col1, col2, col3 = st.columns([3, 1, 3])
 with col1:
@@ -12,35 +12,27 @@ with col2:
 with col3:
     st.write("")
 
-# Titulo de apresentacao
-st.title("Auto Machine Learning Analysis")
-st.subheader("Projeto criado para o curso de Extensão do IF Goiano - Campus Catalão")
+# Title
+st.title("EDA and Auto Machine Learning")
+st.subheader("Project created for use in the NIATS - UFU laboratory")
 
-# Marcação usando css e markdown
+# Custom CSS for larger fonts
 st.markdown("""
 <style>
 .big-font1 {
-    font-size: 23px !important;
+    font-size: 22px !important;
 }
-</style>
-""", unsafe_allow_html = True)
-
-st.markdown("""
-<style>
 .big-font2 {
-    font-size: 21px !important;
+    font-size: 20px !important;
 }
 </style>
-""", unsafe_allow_html = True)
+""", unsafe_allow_html=True)
 
-# Texto apresentando o cenário da ferramenta
+# Introduction text
+st.markdown("<p class='big-font1'>Welcome to our Streamlit application! This project was developed to enable comprehensive exploratory data analysis and automated machine learning specifically for classification problems. You can delve into data statistics and understand how different parameters influence model performance.</p>", unsafe_allow_html=True)
 
-st.markdown("<p class = 'big-font1'> Bem-vindo à nossa aplicação desenvolvida com Streamlit! Este projeto foi criado com o objetivo de facilitar"
-                        "a análise do comportamento de modelos de machine learning, permitindo que você explore como a variação de parâmetros importantes"
-                        "afeta o desempenho dos modelos. Na aba Home, você encontrará informações sobre a aplicação e seu propósito."
-                        "Na aba Upload, você pode enviar arquivos CSV, que serão armazenados para análise posterior. Na aba ML, você terá a oportunidade" 
-                        "de usar a biblioteca PyCaret para definir parâmetros essenciais, como o número de folds e a dimensão dos conjuntos de treinamento e teste."
-                        "Em seguida, você poderá treinar e avaliar diferentes modelos de machine learning de maneira prática e intuitiva. </p>", unsafe_allow_html=True)
+st.markdown("<p class='big-font1'>On the Home tab, you'll find information about the application and its purpose. The Upload tab allows you to submit CSV or XLSX files for subsequent analysis. In the EDA tab, you can conduct exploratory data analysis with statistical summaries and visualizations to gain insights into your dataset. The Machine Learning tab enables you to use the PyCaret library to set essential parameters, such as the number of folds and the sizes of the training and test sets, among other options. You can then train and evaluate various machine learning models for classification in a practical and intuitive manner.</p>", unsafe_allow_html=True)
 
-st.markdown("<p class = 'big-font2'> Navegue pelas abas para explorar todas as funcionalidades e aproveitar ao máximo esta ferramenta. </p>", unsafe_allow_html=True)
-st.markdown("Desenvolvido para curso de Extensão do IF Goiano - Campus Catalão [Bacharelado em Sistemas de Informação](https://ifgoiano.edu.br/home/index.php/cursos-superiores-catalao/12730-sistemas-de-informacao.html)")
+st.markdown("<p class='big-font2'>Navigate through the tabs to explore all features and maximize the potential of this tool.</p>", unsafe_allow_html=True)
+
+st.markdown("This application is used in the NIATS laboratory, part of the [Graduate Program in Biomedical Engineering - UFU](http://www.ppgeb.feelt.ufu.br/pt-br/unidade/programa-de-pos-graduacao-em-engenharia-biomedica)")

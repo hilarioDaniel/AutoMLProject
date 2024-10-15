@@ -1,0 +1,1 @@
+{"file": "Example2_penguins.csv", "target": "sex", "session_id": 1245, "normalize": true, "normalization_method": "zscore", "test_size": 0.2, "remove_multicollinearity": true, "multicollinearity_threshold": 0.9, "fold_strategy": "stratifiedkfold", "fold_number": 10}
