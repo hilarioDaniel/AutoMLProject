@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/hilario/IF%20Goiano/2024/AutoMLProject/mlruns/655303291150265951/bdedcf92300742db820bb7291a3d0bf2/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '655303291150265951'
+lifecycle_stage: active
+run_id: bdedcf92300742db820bb7291a3d0bf2
+run_name: Session Initialized 45cb
+run_uuid: bdedcf92300742db820bb7291a3d0bf2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729017536562
+status: 1
+tags: []
+user_id: hilario

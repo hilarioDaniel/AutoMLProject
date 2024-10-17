@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/hilario/IF%20Goiano/2024/AutoMLProject/mlruns/655303291150265951/2c0db66221d84cea9cbe1889c316d0e1/artifacts
+end_time: 1729017684039
+entry_point_name: ''
+experiment_id: '655303291150265951'
+lifecycle_stage: active
+run_id: 2c0db66221d84cea9cbe1889c316d0e1
+run_name: K-Means Clustering
+run_uuid: 2c0db66221d84cea9cbe1889c316d0e1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729017682324
+status: 3
+tags: []
+user_id: hilario

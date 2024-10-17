@@ -10,66 +10,56 @@ if not os.path.exists('datasets'):
 st.markdown("""
     <style>
     .stButton > button {
-        height: 2em;
+        height: 2.2em;
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
     </style>
     """, unsafe_allow_html=True)
 
 # Page title and description
-st.markdown("<h1 style='text-align: center;'>Upload your Data</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Upload your Dataset</h1>", unsafe_allow_html=True)
 
 df = None  # Initializing df as None
 
-# File type selection
-file_type = st.selectbox("Select the file type", ["None", "CSV", "XLSX"], index=0,
-                         help="Choose the file type you want to upload")
+# Instrução para upload de arquivo CSV ou XLSX
+st.info("Please upload a file with .csv or .xlsx extension")
 
-if file_type != "None":
-    st.divider()
+# File upload widget
+file = st.file_uploader("Upload your dataset here", type=["csv", "xlsx"])
 
-    with st.form("Upload"):
-        # File upload widget
-        file = st.file_uploader("Upload your data here", type=["csv"] if file_type == "CSV" else ["xlsx"])
+if file is not None:
+    # Campo para nome do arquivo
+    file_name = st.text_input("Enter a name for the file (optional)", value="")
 
-        if file_type == "CSV":
-            # Option to choose the CSV delimiter
-            delimiter = st.selectbox("Select the CSV delimiter", [",", ";"], index=0,
-                                     help="Choose ',' for comma and ';' for semicolon")
-        else:
-            delimiter = None
+    # Botão para submeter o arquivo
+    submit_button = st.button("Submit File")
 
-        # Campo para nome do arquivo
-        file_name = st.text_input("Enter a name for the file (optional)", value="")
+    if submit_button:
+        try:
+            # Verifica se o usuário deu um nome ou usa o nome original
+            if file_name == "":
+                file_name = file.name.split(".")[0]
 
-        submit_button = st.form_submit_button("Submit File", )
+            # Processa o arquivo de acordo com sua extensão
+            file_extension = file.name.split(".")[-1]
 
-        if submit_button and file is not None:
-            try:
-                # Verifica se o usuário deu um nome ou usa o nome original
-                if file_name == "":
-                    file_name = file.name.split(".")[0]
+            if file_extension == "csv":
+                df = pd.read_csv(file, index_col=None)
+                file_path = f"datasets/{file_name}.csv"
+                df.to_csv(file_path, index=None)
+            elif file_extension == "xlsx":
+                df = pd.read_excel(file, index_col=None)
+                file_path = f"datasets/{file_name}.xlsx"
+                df.to_excel(file_path, index=None)
 
-                # Salva o arquivo com a extensão correta e salva o nome na sessão
-                if file_type == 'CSV':
-                    df = pd.read_csv(file, index_col=None, sep=delimiter)
-                    file_path = f"datasets/{file_name}.csv"
-                    df.to_csv(file_path, index=None)
-                elif file_type == 'XLSX':
-                    df = pd.read_excel(file, index_col=None)
-                    file_path = f"datasets/{file_name}.xlsx"
-                    df.to_excel(file_path, index=None)
+            # Salva o caminho do arquivo na sessão
+            st.session_state['file_path'] = file_path
+            st.session_state['file_uploaded'] = True
+            st.success(f"File successfully uploaded as {file_name}.{file_extension}!")
 
-                # Salva o caminho do arquivo na sessão
-                st.session_state['file_path'] = file_path
-                st.session_state['file_uploaded'] = True
-                st.success(f"File successfully uploaded as {file_name}.{file_type.lower()}!")
-
-            except Exception as e:
-                st.error(f"Error processing the file: {e}")
-        elif submit_button and file is None:
-            st.warning("Please upload a file before submitting.")
+        except Exception as e:
+            st.error(f"Error processing the file: {e}")
 
 # Botão "Display Dataframe" aparece somente após o upload bem-sucedido
 if 'file_uploaded' in st.session_state and st.session_state['file_uploaded']:

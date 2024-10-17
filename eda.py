@@ -10,7 +10,7 @@ def list_files_in_datasets():
     return files
 
 # Verificar se há arquivos disponíveis na pasta
-files_available = list_files_in_datasets()
+files_available = sorted(list_files_in_datasets())
 
 st.title("Exploratory Data Analysis (EDA)")
 st.divider()
