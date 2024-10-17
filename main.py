@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
 
-## Configuracoes da pagina
+########### CONFIGURAÇÕES DA PÁGINA ###########
 st.set_page_config(
     page_icon="robot", #https://icons.getbootstrap.com/
     page_title="EDA and Machine Learning with Python and Streamlit",
@@ -10,11 +10,11 @@ st.set_page_config(
     initial_sidebar_state="auto",
 )
 
-##### 0.Side bar #####
+########### 0. SIDE BAR ###########
 with st.sidebar:
-    logoHeader = Image.open("img/niats.png")
-    st.image(logoHeader, use_column_width=True)
-    st.header('EDA and ML `version 1.0`')
+    logoHeader = Image.open("./img/niats.png")
+    st.image(logoHeader, caption = 'Niats-UFU', use_column_width=True)
+    st.header('EDA and AutoML `version 1.0`')
 
     selected = option_menu(
         menu_icon="cast",
@@ -27,7 +27,7 @@ with st.sidebar:
     
     st.markdown("Developed by: [Silva, D.H.](https://www.instagram.com/prof.danielhilario/) and [Ribeiro, C.T](https://www.instagram.com/caiotonus/)")
 
-##### 1. Side bar interaction #####
+########### 1. SIDE BAR INTERACTION ###########
 if selected == "Home":
     ## Abrir a página home.py
     with open("home.py", "r") as f:

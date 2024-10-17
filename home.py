@@ -3,8 +3,8 @@ from PIL import Image
 
 # Title and description of the initial page
 # Image
-logoHome = Image.open("img/image1.png")
-col1, col2, col3 = st.columns([3, 1, 3])
+logoHome = Image.open("./img/image1.png")
+col1, col2, col3 = st.columns([4, 1, 4])
 with col1:
     st.write("")
 with col2:
