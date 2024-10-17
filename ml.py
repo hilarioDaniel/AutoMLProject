@@ -128,9 +128,9 @@ st.header("Setup Machine Learning Models")
 # Variável alvo, semente e percentual do conjunto de teste em três colunas
 col1, col2, col3 = st.columns(3)
 with col1:
-    target_variable = st.selectbox("Select the target variable:", df.columns, index=0) if selected_file else ""
+    target_variable = st.selectbox("Select the target:", df.columns, index=0) if selected_file else ""
 with col2:
-    session_id = st.number_input("Session ID (Random State):", min_value=1, step=1, value=1245)
+    session_id = st.number_input("Session ID (Seed):", min_value=1, step=1, value=1245)
 with col3:
     test_size = st.slider('Test dataset percentage:', 0.05, 0.50, step=0.05, value=0.20)
 
