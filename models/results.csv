@@ -1,15 +1,15 @@
 Model,Accuracy,AUC,Recall,Prec.,F1,Kappa,MCC,TT (Sec)
-Decision Tree Classifier,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.008
-Random Forest Classifier,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.027
-Ada Boost Classifier,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.007
-Gradient Boosting Classifier,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.012
-Extra Trees Classifier,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.023
-Light Gradient Boosting Machine,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.02
-Ridge Classifier,0.9764,0.9938,0.955,1.0,0.9746,0.953,0.9575,0.008
-Quadratic Discriminant Analysis,0.9653,0.9612,0.935,1.0,0.9607,0.9321,0.9407,0.008
-K Neighbors Classifier,0.9639,0.9975,0.95,0.98,0.9603,0.928,0.9349,0.014
-Linear Discriminant Analysis,0.9639,1.0,0.93,1.0,0.9603,0.928,0.9349,0.007
-Logistic Regression,0.9528,0.9887,0.93,0.98,0.9492,0.905,0.914,0.175
-SVM - Linear Kernel,0.9528,0.9875,0.93,0.975,0.9496,0.905,0.9091,0.009
-Naive Bayes,0.9403,0.9312,0.955,0.94,0.9444,0.8811,0.8858,0.012
-Dummy Classifier,0.4778,0.5,0.2,0.0889,0.1231,0.0,0.0,0.007
+Logistic Regression,0.9054,0.9673,0.9054,0.9131,0.9046,0.8097,0.8178,0.172
+Ridge Classifier,0.8928,0.9652,0.8928,0.8994,0.8919,0.7844,0.7914,0.009
+Linear Discriminant Analysis,0.8928,0.9652,0.8928,0.8994,0.8919,0.7844,0.7914,0.008
+K Neighbors Classifier,0.8886,0.9511,0.8886,0.8962,0.8875,0.7758,0.7838,0.014
+Light Gradient Boosting Machine,0.8837,0.9502,0.8837,0.8926,0.8823,0.7657,0.7751,0.079
+SVM - Linear Kernel,0.8799,0.951,0.8799,0.8916,0.8782,0.7581,0.7703,0.008
+Gradient Boosting Classifier,0.8793,0.9451,0.8793,0.8861,0.8783,0.7576,0.7645,0.018
+Random Forest Classifier,0.8672,0.9459,0.8672,0.8741,0.8661,0.7328,0.7403,0.03
+Extra Trees Classifier,0.867,0.9553,0.867,0.8751,0.8659,0.7326,0.7411,0.026
+Ada Boost Classifier,0.863,0.9377,0.863,0.8679,0.8624,0.7256,0.7305,0.015
+Decision Tree Classifier,0.8362,0.8341,0.8362,0.8446,0.8344,0.6702,0.6794,0.008
+Quadratic Discriminant Analysis,0.8025,0.8894,0.8025,0.8294,0.7943,0.6004,0.6262,0.008
+Naive Bayes,0.746,0.8501,0.746,0.7529,0.7425,0.489,0.4969,0.008
+Dummy Classifier,0.5065,0.5,0.5065,0.2569,0.3408,0.0,0.0,0.007
