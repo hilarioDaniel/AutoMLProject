@@ -13,7 +13,7 @@ st.set_page_config(
 ########### 0. SIDE BAR ###########
 with st.sidebar:
     logoHeader = Image.open("./img/niats.png")
-    st.image(logoHeader, caption = 'Niats-UFU', use_column_width=True)
+    st.image(logoHeader, use_column_width=True)
     st.header('EDA and AutoML `version 1.0`')
 
     selected = option_menu(
