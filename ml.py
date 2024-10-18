@@ -42,7 +42,7 @@ def run_notebook():
         # Executa o notebook com papermill
         pm.execute_notebook(notebook_path, output_notebook_path)
         for i in range(100):
-            time.sleep(0.1)  # Simulando progresso
+            time.sleep(0.05)  # Simulando progresso
             progress_bar.progress(i + 1)
         st.success("Model training completed! Results saved in the 'models' folder.")
     except Exception as e:
@@ -55,6 +55,12 @@ def run_notebook():
         time.sleep(1)  # Aguarda 1 segundo antes de checar novamente
     else:
         st.error("Training completed, but results.csv was not found.")
+
+    # Carregar e exibir os parâmetros do treinamento
+    if check_file_exists('./models/setup_summary.csv'):
+        setup_summary = pd.read_csv('./models/setup_summary.csv')
+        st.write("### Training Parameters Summary")
+        st.dataframe(setup_summary, use_container_width=True)
 
 # Limpar o cache e deletar os arquivos config.json, results.csv and others
 def clear_data():
@@ -157,6 +163,30 @@ else:
     fold_strategy = 'kfold'
     fold_number = 2
 
+# Opção para corrigir desbalanceamento
+fix_imbalance = st.checkbox("Fix Data Imbalance", value=False)
+if fix_imbalance:
+    st.info("Using SMOTE as the default method for fixing data imbalace.")
+else:
+    fix_imbalance = False
+
+# Opção para aplicar PCA
+apply_pca = st.checkbox("Apply PCA to Reduce Dimensionality", value=False)
+if apply_pca:
+    pca_method = st.selectbox("PCA Method:", ["linear", "kernel", "incremental"], index=0)
+    pca_components = st.slider('Number of PCA Components:', 1, 10, step=1, value=5)
+else:
+    pca_method = None
+    pca_components = None
+
+# Opção para seleção de características
+feature_selection = st.checkbox("Apply Feature Selection", value=False)
+if feature_selection:
+    st.info("Using classic feature selection with LightGBM as the default estimator.")
+    n_features_to_select = st.slider('Number of Features to Select (fraction):', 0.2, 0.9, step=0.1, value=0.5)
+else:
+    n_features_to_select = None
+
 # Botão de Setup para salvar as configurações
 if st.button("Setup"):
     config = {
@@ -169,7 +199,13 @@ if st.button("Setup"):
         "remove_multicollinearity": remove_multicollinearity,
         "multicollinearity_threshold": multicollinearity_threshold,
         "fold_strategy": fold_strategy,
-        "fold_number": fold_number
+        "fold_number": fold_number,
+        "fix_imbalance": fix_imbalance,
+        "pca": apply_pca,
+        "pca_method": pca_method,
+        "pca_components": pca_components,
+        "feature_selection": feature_selection,
+        "n_features_to_select": n_features_to_select
     }
 
     save_configurations(config)

@@ -1,0 +1,25 @@
+Description,Value
+Session id,1245
+Target,Species
+Target type,Multiclass
+Target mapping,"Iris-setosa: 0, Iris-versicolor: 1, Iris-virginica: 2"
+Original data shape,"(150, 5)"
+Transformed data shape,"(150, 5)"
+Transformed train set shape,"(105, 5)"
+Transformed test set shape,"(45, 5)"
+Numeric features,4
+Preprocess,True
+Imputation type,simple
+Numeric imputation,mean
+Categorical imputation,mode
+Fix imbalance,True
+Fix imbalance method,SMOTE
+Normalize,True
+Normalize method,zscore
+Fold Generator,StratifiedKFold
+Fold Number,4
+CPU Jobs,-1
+Use GPU,False
+Log Experiment,False
+Experiment Name,clf-default-name
+USI,c9ae
