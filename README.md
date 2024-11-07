@@ -10,7 +10,7 @@ The program offers:
 # Getting the last code
 
 to get the last code using git, simply type:
-> git clone (https://github.com/](https://github.com/hilarioDaniel/AutoMLProject.git)
+> git clone [https://github.com/](https://github.com/hilarioDaniel/AutoMLProject.git)
 
 # Requirements
 O will need of the Python 3.10 or higher and some additional packages:
