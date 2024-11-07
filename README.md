@@ -8,8 +8,7 @@ The program offers:
 3.
 
 # Getting the last code
-
-to get the last code using git, simply type:
+To get the last code using git, simply type:
 > git clone https://github.com/hilarioDaniel/AutoMLProject.git
 
 # Requirements
