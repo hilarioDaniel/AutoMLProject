@@ -35,4 +35,9 @@ from the source directory. Maybe you need to be the administrator to install the
 
 # Runing the EDA and AutoML
 
+# Support
+If you encounter any issues or have questions, open an issue on GitHub or contact us at daniel.hilario@ufu.br
+
+
+
 
