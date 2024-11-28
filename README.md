@@ -59,12 +59,10 @@ Type the command below on the terminal to run the app.
 
 After this step is just to select the options on the main menu.
 
+
 ---
 
 
 # Support
 If you encounter any issues or have questions, open an issue on GitHub or contact us at daniel.hilario@ufu.br
-
-
-
 
