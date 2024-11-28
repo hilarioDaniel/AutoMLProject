@@ -38,8 +38,8 @@ O will need of the Python 3.10 or higher and some additional packages:
 * and others.
 
 > We created a requirements.txt to help the users.
-
 ---
+
 
 # Installing
 You can use `pip` to install the app:
@@ -48,6 +48,9 @@ You can use `pip` to install the app:
 
 from the source directory. Maybe you need to be the administrator to install the program.
 
+---
+
+
 # Running the EDA and AutoML
 
 Type the command below on the terminal to run the app.
@@ -55,6 +58,9 @@ Type the command below on the terminal to run the app.
 > streamlit run main.py
 
 After this step is just to select the options on the main menu.
+
+---
+
 
 # Support
 If you encounter any issues or have questions, open an issue on GitHub or contact us at daniel.hilario@ufu.br
