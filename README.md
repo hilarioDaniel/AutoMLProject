@@ -1,15 +1,27 @@
 # Overview
 
-EDA and AutoML version 1.0 is a Python-based web application designed to streamline exploratory data analysis (EDA) and machine learning processes, with a focus on identifying patterns in audio and video datasets. The system is particularly suited to biomedical research, such as studies on Parkinson's disease. Built using Python and the Streamlit framework, it provides an intuitive interface for data analysis, visualization, and automated classification tasks. Its flexibility and user-friendly design make it an invaluable tool for researchers and healthcare professionals, facilitating meaningful insights and driving advancements in biomedical research.
+**EDA and AutoML `version 1.0`** is a Python-based web application designed to streamline exploratory data analysis (EDA) and machine learning processes, with a focus on identifying patterns in audio and video datasets. The system is particularly suited for biomedical research, such as studies on Parkinson's disease. Built using Python and the Streamlit framework, it provides an intuitive interface for data analysis, visualization, and automated classification tasks. Its flexibility and user-friendly design make it an invaluable tool for researchers and healthcare professionals, enabling meaningful insights and driving advancements in biomedical research.
 
-The program offers:
-1. Exploratory Data Analysis (EDA) - It's a key feature of the tool, designed to help researchers summarize and make sense of the main characteristics of their datasets. The tool enables users to calculate important descriptive statistics like mean, median, standard deviation, and range.
+## Features
+1. **Exploratory Data Analysis (EDA)**  
+   The tool helps researchers summarize and understand the main characteristics of their datasets. Users can calculate descriptive statistics such as mean, median, standard deviation, and range with ease.  
    
-2.Preprocessing and AutoML - The tool provides the option for data normalization, allowing researchers to scale features to a standard range, typically [0, 1] or [-1, 1], with techniques like Min-Max scaling or Z-score normalization available. The tool also allows users to configure the dimensions of the training and testing datasets, select the fold strategy for cross-validation, number of folds, fix data imbalance, PCA (Principal Component Analysis), and feature selection.
+2. **Preprocessing and AutoML**  
+   - Offers data normalization options, including Min-Max scaling and Z-score normalization.  
+   - Configurable training and testing dataset proportions.  
+   - Fold strategy selection for cross-validation, with options to specify the number of folds.  
+   - Fixes data imbalances and supports techniques like PCA (Principal Component Analysis) and feature selection.  
 
-# Getting the last code
-To get the last code using git, simply type:
-> git clone https://github.com/hilarioDaniel/AutoMLProject.git
+---
+
+# Getting the Latest Code
+
+To clone the repository using Git, run the following command:
+
+```bash
+git clone https://github.com/hilarioDaniel/AutoMLProject.git
+
+---
 
 # Requirements
 O will need of the Python 3.10 or higher and some additional packages:
