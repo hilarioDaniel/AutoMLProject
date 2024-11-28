@@ -21,7 +21,9 @@ To clone the repository using Git, run the following command:
 ```bash
 git clone https://github.com/hilarioDaniel/AutoMLProject.git
 
+```
 ---
+
 
 # Requirements
 O will need of the Python 3.10 or higher and some additional packages:
@@ -36,6 +38,8 @@ O will need of the Python 3.10 or higher and some additional packages:
 * and others.
 
 > We created a requirements.txt to help the users.
+
+---
 
 # Installing
 You can use `pip` to install the app:
