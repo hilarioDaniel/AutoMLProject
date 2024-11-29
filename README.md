@@ -19,7 +19,8 @@
 To clone the repository using Git, run the following command:
 
 ```bash
-git clone https://github.com/hilarioDaniel/AutoMLProject.git
+
+> git clone https://github.com/hilarioDaniel/AutoMLProject.git
 
 ```
 ---
