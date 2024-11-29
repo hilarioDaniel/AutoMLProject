@@ -38,7 +38,9 @@ O will need of the Python 3.10 or higher and some additional packages:
 * PIL
 * and others.
 
+
 > We created a requirements.txt to help the users.
+
 ---
 
 
@@ -62,7 +64,7 @@ Type the command below on the terminal to run the app.
 
 ```bash
 
-> streamlit run main.py
+streamlit run main.py
 
 ```
 
