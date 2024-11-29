@@ -62,6 +62,36 @@ After this step is just to select the options on the main menu.
 
 ---
 
+## License
+
+This project is licensed under the GNU General Public License version 2 (GPLv2) or later. Please see the [LICENSE](LICENSE) file for full details, including the citation requirement.
+
+
+## Citation
+
+If you use this software in your research, please cite it as indicated below. This encourages us to continue sharing and improving our work:<hr />
+
+- Daniel Hilário da Silva, Leandro Rodrigues da Silva Souza, Caio Tonus Ribeiro, Simone Hilário da Silva Brasileiro, José Renato Munari Nardo, Adriano Alves Pereira, Adriano de Oliveira Andrade**  
+*A Web Application for Exploratory Data Analysis and Classification of Parkinson’s Disease Patients Using Machine Learning Models on Different Datasets*  
+Software Impacts, Elsevier BV, 2024, [pages], ISSN [issn], [volume], https://doi.org/[doi]
+
+### BibTeX
+
+```
+@article{silvaBIB2024,
+  author = {Daniel Hilário da Silva and Leandro Rodrigues da Silva Souza and Caio Tonus Ribeiro and Simone Hilário da Silva Brasileiro and José Renato Munari Nardo and Adriano Alves Pereira and Adriano de Oliveira Andrade},
+  title = {A Web Application for Exploratory Data Analysis and Classification of Parkinson’s Disease Patients Using Machine Learning Models on Different Datasets},
+  journal = {Software Impacts},
+  pages = {}, 
+  year = {2024},
+  issn = {}, 
+  volume = {}, 
+  publisher = {Elsevier BV},
+  doi = {},
+  url = {},
+  keywords = {Exploratory data analysis, Machine learning, Parkinson's disease, Patient classification, Early diagnosis}
+}
+```
 
 # Support
 If you encounter any issues or have questions, open an issue on GitHub or contact us at daniel.hilario@ufu.br

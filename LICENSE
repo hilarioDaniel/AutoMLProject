@@ -1,0 +1,49 @@
+
+EDA and AutoML for Python - Software License
+
+A web application designed to streamline exploratory data analysis (EDA) and machine learning processes, focusing on identifying patterns in audio and video datasets.
+
+Copyright (C) 2024  
+Daniel Hilário da Silva, Leandro Rodrigues da Silva Souza, Caio Tonus Ribeiro,  
+Simone Hilário da Silva Brasileiro, José Renato Munari Nardo, Adriano Alves Pereira,  
+Adriano de Oliveira Andrade  
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+### Citation Requirement
+
+If you use this software in academic, scientific, or commercial work, you **must cite** the following reference:
+
+**Daniel Hilário da Silva, Leandro Rodrigues da Silva Souza, Caio Tonus Ribeiro, Simone Hilário da Silva Brasileiro, José Renato Munari Nardo, Adriano Alves Pereira, Adriano de Oliveira Andrade**  
+*A Web Application for Exploratory Data Analysis and Classification of Parkinson’s Disease Patients Using Machine Learning Models on Different Datasets*  
+Software Impacts, Elsevier BV, 2024, [pages], ISSN [issn], [volume], https://doi.org/[doi]
+
+---
+
+### BibTeX
+
+```bibtex
+@article{silvaBIB2024,
+  author = {Daniel Hilário da Silva and Leandro Rodrigues da Silva Souza and Caio Tonus Ribeiro and Simone Hilário da Silva Brasileiro and José Renato Munari Nardo and Adriano Alves Pereira and Adriano de Oliveira Andrade},
+  title = {A Web Application for Exploratory Data Analysis and Classification of Parkinson’s Disease Patients Using Machine Learning Models on Different Datasets},
+  journal = {Software Impacts},
+  pages = {}, 
+  year = {2024},
+  issn = {}, 
+  volume = {}, 
+  publisher = {Elsevier BV},
+  doi = {},
+  url = {},
+  keywords = {Exploratory data analysis, Machine learning, Parkinson's disease, Patient classification, Early diagnosis}
+}
+```
+
+By using this software, you agree to this citation requirement.
