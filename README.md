@@ -20,7 +20,7 @@ To clone the repository using Git, run the following command:
 
 ```bash
 
-> git clone https://github.com/hilarioDaniel/AutoMLProject.git
+git clone https://github.com/hilarioDaniel/AutoMLProject.git
 
 ```
 ---
@@ -45,7 +45,11 @@ O will need of the Python 3.10 or higher and some additional packages:
 # Installing
 You can use `pip` to install the app:
 
-> pip install requirements.txt
+```bash
+
+pip install requirements.txt
+
+```
 
 from the source directory. Maybe you need to be the administrator to install the program.
 
@@ -56,7 +60,11 @@ from the source directory. Maybe you need to be the administrator to install the
 
 Type the command below on the terminal to run the app.
 
+```bash
+
 > streamlit run main.py
+
+```
 
 After this step is just to select the options on the main menu.
 
