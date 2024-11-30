@@ -1,6 +1,15 @@
-# Overview
+# A Web Application for exploratory data analysis and classification of Parkinson’s Disease patients using machine learning models on different datasets
+
+Version: 1.0
+Authors: Iman Farahbakhsh
+Repository: FEGC GitHub
+License: MIT License
+
+## Overview
 
 **EDA and AutoML `version 1.0`** is a Python-based web application designed to streamline exploratory data analysis (EDA) and machine learning processes, with a focus on identifying patterns in audio and video datasets. The system is particularly suited for biomedical research, such as studies on Parkinson's disease. Built using Python and the Streamlit framework, it provides an intuitive interface for data analysis, visualization, and automated classification tasks. Its flexibility and user-friendly design make it an invaluable tool for researchers and healthcare professionals, enabling meaningful insights and driving advancements in biomedical research.
+
+---
 
 ## Features
 1. **Exploratory Data Analysis (EDA)**  
@@ -14,7 +23,7 @@
 
 ---
 
-# Getting the Latest Code
+## Getting the Latest Code
 
 To clone the repository using Git, run the following command:
 
@@ -26,7 +35,7 @@ git clone https://github.com/hilarioDaniel/AutoMLProject.git
 ---
 
 
-# Requirements
+## Requirements
 O will need of the Python 3.10 or higher and some additional packages:
 * Streamlit
 * Pandas
@@ -44,7 +53,7 @@ O will need of the Python 3.10 or higher and some additional packages:
 ---
 
 
-# Installing
+## Installing
 You can use `pip` to install the app:
 
 ```bash
@@ -58,7 +67,7 @@ from the source directory. Maybe you need to be the administrator to install the
 ---
 
 
-# Running the EDA and AutoML
+## Running the EDA and AutoML
 
 Type the command below on the terminal to run the app.
 
@@ -104,6 +113,6 @@ Software Impacts, Elsevier BV, 2024, [pages], ISSN [issn], [volume], https://doi
 }
 ```
 
-# Support
+## Support
 If you encounter any issues or have questions, open an issue on GitHub or contact us at daniel.hilario@ufu.br
 
