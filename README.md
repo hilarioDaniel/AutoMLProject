@@ -1,9 +1,16 @@
 # A Web Application for exploratory data analysis and classification of Parkinson’s Disease patients using machine learning models on different datasets
 
+
 Version: 1.0
-Authors: Iman Farahbakhsh
+
+Authors: Silva, D. H. et. al
+
 Repository: FEGC GitHub
-License: MIT License
+
+License: GPLv2 License
+
+---
+
 
 ## Overview
 
