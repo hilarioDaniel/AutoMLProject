@@ -9,7 +9,7 @@ Repository: FEGC GitHub
 
 License: GPLv2 License
 
-weblink: https://eda-automl.streamlit.app/
+Link: https://eda-automl.streamlit.app/
 
 ---
 
